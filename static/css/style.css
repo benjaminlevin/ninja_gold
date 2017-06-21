@@ -1,0 +1,58 @@
+*{
+  margin-left: auto;
+  margin-right: auto;
+  font-family: helvetica;
+}
+
+#wrapper{
+  width: 970px;
+}
+
+h3{
+  display: inline-block;
+  margin-top: 6px;
+  vertical-align: middle;
+}
+
+#gold{
+  width: 100px;
+  height: 14px;
+  border: solid black 2px;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 0px 6px 6px;
+  position: absolute;
+  text-align: center;
+}
+
+div.location{
+  border: solid black 2px;
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  margin: 2%;
+  text-align: center;
+}
+
+footer{
+  border: solid black 2px;
+  width: 96%;
+  height: 40%;
+  overflow: auto;
+}
+
+li{
+  list-style: none;
+}
+
+footer .a{
+  color: green;
+}
+
+footer .o{
+  color: red;
+}
+
+#reset{
+  margin: 2% 0% 0% 2%
+}

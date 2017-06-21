@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Ninja Gold</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h3>Your Gold:</h3>
+        <h3 id="gold">{{session['wallet']}}</h3>
+      </header>
+      <div class="location">
+        <h1>Farm</h1>
+        <h4>(earns 10-20 golds)</h4>
+        <form action='/farm' method='post'>
+          <input type='submit' value='Find Gold!'>
+        </form>
+      </div>
+      <div class="location">
+        <h1>Cave</h1>
+        <h4>(earns 5-10 golds)</h4>
+        <form action='/cave' method='post'>
+          <input type='submit' value='Find Gold!'>
+        </form>
+      </div>
+      <div class="location">
+        <h1>House</h1>
+        <h4>(earns 2-5 golds)</h4>
+        <form action='/house' method='post'>
+          <input type='submit' value='Find Gold!'>
+        </form>
+      </div>
+      <div class="location">
+        <h1>Casino</h1>
+        <h4>(earns/takes 0-50 golds)</h4>
+        <form action='/casino' method='post'>
+          <input type='submit' value='Find Gold!'>
+        </form>
+      </div>
+      <h3>Activities</h3>
+      <footer>
+        {% for x in session['activity'] %}
+        <li class= {% print x[1] %}>{{ x }}</li>
+        {% endfor %}
+      </footer>
+      <form id="reset" action='/reset' method='get'>
+        <input type='submit' value='Start Over!'>
+      </form>
+    </div>
+  </body>
+</html>
